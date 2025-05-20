@@ -1,0 +1,34 @@
+// FONTS
+
+@mixin poppins {
+  font-family: "Poppins", sans-serif;
+}
+
+// FLEXBOX CENTER
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// MEDIA QUERIES
+@mixin sm {
+  @media screen and (max-width: #{$screen-sm}) {
+    @content;
+  }
+}
+@mixin md {
+  @media screen and (max-width: #{$screen-md}) {
+    @content;
+  }
+}
+@mixin lg {
+  @media screen and (max-width: #{$screen-lg}) {
+    @content;
+  }
+}
+@mixin xl {
+  @media screen and (max-width: #{$screen-xl}) {
+    @content;
+  }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../assets/styles/styles.css" />
+    <script src="https://kit.fontawesome.com/b0d8e23d7e.js" crossorigin="anonymous" defer></script>
+    <title>JournaStage - Contact</title>
+  </head>
+  <body>
+    <header>
+      <div class="content header-content">
+        <a href="../index.php" class="navlogo">
+          <img src="../assets/img/logo.png" alt="logo" />
+          <span>JournaStage</span>
+        </a>
+        <nav>
+          <a href="accountRequest.html" class="navlink active">Vous n'avez pas de compte ?</a>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="content">
+        <div class="main-content">
+          <h1>Demande de compte</h1>
+          <p class="description">
+            Nouvel étudiant ou nouveau professeur ? Veuillez remplir le formulaire ci-dessous pour demander la création
+            d'un compte sur JournaStage.
+          </p>
+          <form method="post" action="request.php" class="newJournal">
+            <div class="field-container">
+              <label class="without-icon">Je suis :</label>
+              <div class="radio-group">
+                <label for="student">
+                  <input type="radio" name="role" id="student" value="student" required />
+                  Étudiant
+                </label>
+                <label for="teacher">
+                  <input type="radio" name="role" id="teacher" value="teacher" />
+                  Professeur
+                </label>
+              </div>
+            </div>
+            <div class="field-container">
+              <label class="without-icon" for="name">Nom</label>
+              <input
+                name="name"
+                class="field large"
+                id="name"
+                type="text"
+                placeholder="Saisissez ici votre nom"
+                required
+              />
+            </div>
+            <div class="field-container">
+              <label class="without-icon" for="firstname">Prénom</label>
+              <input
+                name="firstname"
+                class="field large"
+                id="firstname"
+                type="text"
+                placeholder="Saisissez ici votre nom"
+                required
+              />
+            </div>
+            <div class="field-container">
+              <label class="without-icon" for="birthDate">Date de naissance</label>
+              <input name="birthDate" class="field small" id="birthDate" type="date" required />
+            </div>
+            <div class="field-container">
+              <label class="without-icon" for="email">Adresse e-mail</label>
+              <input
+                name="email"
+                class="field large"
+                id="email"
+                type="email"
+                placeholder="Saisissez ici votre adresse e-mail"
+                required
+              />
+            </div>
+            <button class="medium" type="submit">Envoyer ma demande</button>
+            <!-- <p class="description">
+              Un administrateur validera votre demande dans les plus brefs délais. <br />
+              Vous recevrez un e-mail de confirmation une fois votre compte créé avec votre login et mot de passe
+              provisoire.
+            </p> -->
+          </form>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="content footer-content">
+        <p>JournaStage © 2025. Tous droits réservés.</p>
+        <p><a href="contact.php">Besoin d'aide ?</a></p>
+      </div>
+    </footer>
+  </body>
+</html>

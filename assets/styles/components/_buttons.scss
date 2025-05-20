@@ -1,0 +1,109 @@
+.button-align {
+  @include flex-center;
+  margin-top: 1rem;
+  button {
+    margin: 0 1rem;
+  }
+}
+
+.title-with-btn {
+  @include flex-center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 0 4rem;
+  @include lg {
+    width: fit-content;
+    padding: 0;
+  }
+  button {
+    margin: 4rem 0 2rem;
+  }
+  .spacer {
+    flex: 1;
+    @include lg {
+      display: none;
+      flex: auto;
+    }
+  }
+}
+
+button,
+form label.file {
+  @include flex-center;
+  margin: 1rem 0;
+  background-color: $red;
+  border-radius: 35px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $light;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  &:hover {
+    background-color: darken($red, 10%);
+  }
+  a {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    font-weight: 600;
+    color: $light;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+  i {
+    margin-right: 1rem;
+  }
+}
+
+button.small-round {
+  width: 40px;
+  height: 40px;
+  margin: 0 0.4rem;
+  border-radius: 100%;
+  a {
+    @include flex-center;
+  }
+  i {
+    margin: 0;
+    font-size: 1.1rem;
+  }
+}
+
+button.medium-round {
+  width: 70px;
+  height: 70px;
+  margin-right: 2rem;
+  border-radius: 100%;
+  a {
+    @include flex-center;
+  }
+  i {
+    margin: 0;
+    font-size: 2rem;
+  }
+}
+
+button.small {
+  width: 150px;
+  height: 50px;
+  padding: 0 0.8rem;
+}
+
+button.medium {
+  width: 350px;
+  height: 50px;
+  padding: 0 1rem;
+}
+
+button.large {
+  width: 600px;
+  height: 50px;
+  padding: 0 1.2rem;
+}
+
+button.center,
+button a.center {
+  @include flex-center;
+}

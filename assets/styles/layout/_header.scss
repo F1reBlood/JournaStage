@@ -1,0 +1,59 @@
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+  @include md {
+    flex-direction: column;
+  }
+}
+
+// LOGO
+
+header .navlogo-container {
+  display: flex;
+  align-items: center;
+  @include md {
+    margin-bottom: 1rem;
+  }
+  & p {
+    margin-left: 1rem;
+    font-size: 1.3rem;
+    color: $logo;
+    @include lg {
+      display: none;
+    }
+  }
+}
+
+header a.navlogo {
+  display: flex;
+  align-items: center;
+  &:hover {
+    text-decoration: none;
+  }
+  & img {
+    width: 65px;
+    height: 65px;
+  }
+  & span {
+    margin-left: 0.6rem;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $logo;
+  }
+}
+
+// LIENS
+
+header a.navlink {
+  font-size: 0.9rem;
+  color: #c8e5dd90;
+  &:not(:first-child) {
+    margin-left: 2rem;
+  }
+  &.active {
+    color: $logo;
+    font-weight: 600;
+  }
+}

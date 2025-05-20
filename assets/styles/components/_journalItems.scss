@@ -1,0 +1,63 @@
+.journalItems {
+  margin: 2rem 0;
+}
+
+.journalItem {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow: hidden;
+  border: $dark-transparent 2px solid;
+  background-color: $light-transparent;
+  height: 80px;
+  width: 800px;
+  border-radius: 35px;
+  &:not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+  @include lg {
+    flex-direction: column;
+  }
+  .date,
+  .title,
+  .actions {
+    display: flex;
+    align-items: center;
+    height: 60%;
+  }
+  .date {
+    @include flex-center;
+    width: 15%;
+    p {
+      font-weight: 600;
+    }
+  }
+  .title {
+    width: 70%;
+    border-left: $dark-transparent 2px solid;
+    border-right: $dark-transparent 2px solid;
+    p {
+      margin-left: 1rem;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      overflow: hidden;
+    }
+    .file {
+      margin: 0 1rem;
+      i {
+        font-size: 1.4rem;
+        color: $dark-transparent;
+      }
+    }
+  }
+  .actions {
+    @include flex-center;
+    width: 15%;
+    .view {
+      background-color: $blue;
+      &:hover {
+        background-color: darken($blue, 10%);
+      }
+    }
+  }
+}

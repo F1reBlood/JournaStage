@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: $dark;
+}
+
+header,
+footer {
+  height: 100px;
+  @include md {
+    height: auto;
+    padding: 2rem 0;
+  }
+}
+
+main {
+  display: flex;
+  flex: 1;
+  background: url(../img/background.png) repeat;
+  h1 {
+    margin: 4rem 0 2rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    @include md {
+      font-size: 1.6rem;
+    }
+  }
+  h2 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin: 2rem 0 1rem;
+    text-align: center;
+    @include md {
+      font-size: 1rem;
+    }
+  }
+  p.description {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    font-weight: 500;
+    color: $dark-transparent;
+    @include md {
+      font-size: 1rem;
+    }
+  }
+  .student-info {
+    width: 50%;
+    padding: 1rem 0 2rem;
+    font-size: 1.2rem;
+    text-align: center;
+    font-weight: 600;
+    color: $dark-transparent;
+    border-top: 2px solid $dark-transparent;
+  }
+}
+
+.content {
+  max-width: $screen-xl;
+  margin: 0 auto;
+  padding: 0 120px;
+  @include lg {
+    padding: 0 60px;
+  }
+  @include sm {
+    padding: 0 30px;
+  }
+}
+
+main .content {
+  padding-bottom: 2rem;
+  flex: 1;
+  background-color: #ffffff60;
+}
+
+.main-content {
+  @include flex-center;
+  flex-direction: column;
+}
+
+i {
+  font-style: italic;
+  font-weight: 600;
+}

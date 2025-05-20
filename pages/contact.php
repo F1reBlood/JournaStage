@@ -1,5 +1,4 @@
 <?php
-
 if (isset($_POST['send_mail']))
 {
   $erreur = "";
@@ -22,7 +21,6 @@ if (isset($_POST['send_mail']))
     $erreur = "Une erreur s'est produite lors de l'envoi de l'e-mail.";
   }
 }
-
 ?>
 
 <!DOCTYPE html>

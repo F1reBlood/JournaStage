@@ -1,5 +1,6 @@
 <?php
 session_start();
+if (isset($_SESSION['login'])){
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -71,3 +72,9 @@ session_start();
     ?>
   </body>
 </html>
+<?php
+}
+else{
+  echo "La connexion est perdue, veuillez revenir à la <a href='index.php'>page d'index</a> pour vous reconnecter.";
+}
+?>

@@ -78,9 +78,16 @@ if (isset($_POST['validation'])){
             <form action="#" method="post" class="login">
             <?php
               if (isset($_POST['validation'])){
-                ?>
-                <div class="erreur">Le mot de passe ou le login est incorrect</div>
-                <?php
+                if (isset($erreur) && $erreur != ""){
+                  ?>
+                  <div class="erreur"> <?php echo $erreur ?></div>
+                  <?php
+                }
+                else{
+                  ?>
+                  <div class="erreur">Le mot de passe ou le login est incorrect</div>
+                  <?php
+                }
               }            
               ?>
   

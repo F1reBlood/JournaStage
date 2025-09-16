@@ -42,15 +42,16 @@ if (isset($_SESSION['login'])){
             </button>
           <?php
           }
-		  elseif($_SESSION['type'] == 2){
+		  elseif($_SESSION['type'] == 2)
 			?>
 			<p class="description">
             Bienvenue sur JournaStage, votre espace dédié pour suivre et encadrer le parcours de vos élèves en
             entreprise.
           </p>
           <h2>Quelle classe souhaitez-vous suivre ?</h2>
-          
+
 				<?php 
+        // Affiche la liste des classes dans lesquelles le professeur enseigne
 				if($connexion = mysqli_connect($serveur, $user, $bdd_password, $BDD_name)){
 				$requête = "Select journastage_classe.nom from journastage_classe join journastage_enseigner on
 				journastage_classe.id_classe=journastage_enseigner.id_classe where id_professeur=$_SESSION[id]";
@@ -73,7 +74,7 @@ if (isset($_SESSION['login'])){
 				?>
 			</p>
 		  <?php
-		  }
+		  
           ?>
         </div>
       </div>
@@ -87,5 +88,5 @@ if (isset($_SESSION['login'])){
 <?php
 }
 else{
-  echo "La connexion est perdue, veuillez revenir à la <a href='index.php'>page d'index</a> pour vous reconnecter.";
+  echo "La connexion est perdue, veuillez revenir à la <a href='..'>page d'index</a> pour vous reconnecter.";
 }
